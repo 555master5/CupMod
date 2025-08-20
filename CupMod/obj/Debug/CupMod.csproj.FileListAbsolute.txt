@@ -1,0 +1,14 @@
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\modinfo.json
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\modicon.png
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.csproj.AssemblyReference.cache
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.AssemblyInfoInputs.cache
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.AssemblyInfo.cs
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.csproj.CoreCompileInputs.cache
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.dll
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\refint\CupMod.dll
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.pdb
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\CupMod.deps.json
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\CupMod.dll
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\CupMod.pdb
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\ref\CupMod.dll

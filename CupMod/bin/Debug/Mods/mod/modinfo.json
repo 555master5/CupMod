@@ -1,0 +1,11 @@
+{
+    "type": "code",
+    "modid": "cupmod",
+    "name": "Cup Mod",
+    "description" : "Adds a simple cup",
+    "authors": ["Daymare"],
+    "version": "1.0.0",
+    "dependencies": { 
+      "game": ""
+    }
+}
