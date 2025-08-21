@@ -32,7 +32,7 @@
 			rotation: { x: 45, y: 86, z: -67 },
 			scale: 0.9
 		},
-		breakchance: 0.1
+		breakchance: 0.2
 	},
 	doNotRenderAtLod2: true,
 	blockmaterial: "Ceramic",
@@ -51,7 +51,7 @@
 		}
 	},
 	sounds: {
-		walk: "game:walk/stone",
+		"walk": "game:walk/stone*"
 	},
 	sideopaque: {
 		all: false
@@ -70,9 +70,9 @@
 		scale: 3.5
 	},
 	tpHandTransform: {
-		translation: { x: -0.97, y: -0.14, z: -0.63 },
-		rotation: { x: -50, y: 15, z: -104 },
+		translation: { x: -0.5, y: -0.2, z: -0.45 },
+		rotation: { x: -93, y: 7, z: -89 },
 		origin: { x: 0.5, y: 0.1, z: 0.5 },
-		scale: 0.66
+		scale: 1.0599
 	}
 }

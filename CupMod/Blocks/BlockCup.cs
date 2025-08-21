@@ -15,8 +15,12 @@ namespace CupMod.Blocks
 
         public override void OnHeldInteractStart(ItemSlot itemslot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling)
         {
-            base.OnHeldInteractStart(itemslot, byEntity, blockSel, entitySel, firstEvent, ref handHandling);
-            IsCurrentlyThrowing = false;
+            if (GetCurrentLitres(itemslot.Itemstack) > 0 || byEntity.Controls.ShiftKey)
+            {
+                base.OnHeldInteractStart(itemslot, byEntity, blockSel, entitySel, firstEvent, ref handHandling);
+                IsCurrentlyThrowing = false;
+                return;
+            }
             if (GetCurrentLitres(itemslot.Itemstack) == 0 && !byEntity.Controls.ShiftKey)
             {
                 IsCurrentlyThrowing = true;
@@ -25,12 +29,16 @@ namespace CupMod.Blocks
                 byEntity.StartAnimation("aim");
                 handHandling = EnumHandHandling.PreventDefault;
                 return;
-           }
+            }
         }
 
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             base.OnHeldInteractStep(secondsUsed, slot, byEntity, blockSel, entitySel);
+            if (secondsUsed >= 0.95f && IsCurrentlyThrowing == false)
+            {
+                base.OnHeldInteractStop(secondsUsed, slot, byEntity, blockSel, entitySel);
+            }
 
             if (IsCurrentlyThrowing)
             {
@@ -120,7 +128,12 @@ namespace CupMod.Blocks
 
                 float damage = 1;
                 ItemStack stack = slot.TakeOut(1);
+                //Used for glass and clay types
                 string cup_color = stack.Collectible.Variant["color"];
+                //Used for flagons
+                string cup_wood = stack.Collectible.Variant["wood"];
+                string cup_metal = stack.Collectible.Variant["metal"];
+
                 string cup_type = stack.Collectible.Code.FirstCodePart();
                 Console.WriteLine(cup_type);
                 slot.MarkDirty();
@@ -138,6 +151,12 @@ namespace CupMod.Blocks
                         break;
                     case "claymug":
                         type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"thrownmug-{cup_color}"));
+                        break;
+                    case "wineglass":
+                        type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"thrownwineglass-{cup_color}"));
+                        break;
+                    case "flagon":
+                        type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"thrownflagon-{cup_wood}-{cup_metal}"));
                         break;
                     default:
                         type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"throwncup-{cup_color}"));

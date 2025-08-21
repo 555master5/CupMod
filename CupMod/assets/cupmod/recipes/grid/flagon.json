@@ -1,0 +1,17 @@
+[
+	{
+		ingredientPattern: "SP",
+		ingredients: {
+			"S": { type: "item", code: "game:metalnailsandstrips-*", name: "metal"},
+			"P": { type: "item", code: "game:plank-*", name:"wood", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"], quantity: 2},
+		},
+		width: 2,
+		height: 1,
+		shapeless: true,
+		output: { 
+			type: "block", 
+			code: "flagon-{wood}-{metal}", 
+			quantity: 4
+		}
+	}
+]

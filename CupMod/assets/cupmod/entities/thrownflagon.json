@@ -1,0 +1,33 @@
+{
+	code: "thrownflagon",
+	class: "cupmod.throwncup",
+	tags: ["inanimate", "projectile"],
+	variantgroups: [
+		{ code: "wood", loadFromProperties: "block/wood"},
+		{ code: "metal", loadFromProperties: "block/metal"}
+	],
+	attributes: {
+		isProjectile: true,
+		physics: {
+			groundDragFactor: 1,
+			airDragFactor: 0.25
+		}
+	},
+	hitboxSize: { x: 0.4, y: 0.2 },
+	deadHitboxSize: { x: 0.25, y: 0.125 },
+	client: {
+		renderer: "Shape",
+		shape: { base: "cupmod:block/cups/flagon" },
+		textures: {
+			"wood": { base: "game:block/wood/debarked/{wood}*" },
+			"metal": { base: "game:block/metal/ingot/{metal}" }
+		},
+		size: 1,
+		behaviors: [{ code: "passivephysics" }, { code: "interpolateposition" }],
+	},
+	server: {
+		behaviors: [{ code: "passivephysics" }, { code: "despawn", minSeconds: 300 }],
+	},
+	sounds: {
+	},
+}

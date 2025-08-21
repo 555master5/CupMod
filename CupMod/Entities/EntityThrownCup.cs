@@ -118,13 +118,30 @@ namespace CupMod.Entities
         public override void OnCollided()
         {
             EntityPos pos = SidedPos;
-
+            
             if (!beforeCollided && World is IServerWorldAccessor)
             {
                 float strength = GameMath.Clamp((float)motionBeforeCollide.Length() * 4, 0, 1);
-                string cup_material = Variant["material"];
-                Console.WriteLine("[Cup Mod] Cup made from material " + cup_material+ "has collided with strength "+strength);
-
+                string cup_type = ProjectileStack.Collectible.Code.FirstCodePart();
+                string break_sound_asset_loc = "sounds/thud";
+                switch (cup_type)
+                {
+                    case "claycup":
+                        break_sound_asset_loc = "sounds/block/ceramicbreak";
+                        break;
+                    case "claymug":
+                        break_sound_asset_loc = "sounds/block/ceramicbreak";
+                        break;
+                    case "wineglass":
+                        break_sound_asset_loc = "sounds/block/glass";
+                        break;
+                    case "flagon":
+                        break_sound_asset_loc = "sounds/block/stickbreak";
+                        break;
+                    default:
+                        break_sound_asset_loc = "sounds/block/stickbreak";
+                        break;
+                }
                 if (CollidedHorizontally)
                 {
                     float xdir = pos.Motion.X == 0 ? -1 : 1;
@@ -136,7 +153,7 @@ namespace CupMod.Entities
                     if (strength > 0.1f && World.Rand.NextDouble() > 1 - HorizontalImpactBreakChance)
                     {
                         World.SpawnCubeParticles(SidedPos.XYZ.OffsetCopy(0, 0.2, 0), ProjectileStack, 0.5f, ImpactParticleCount, ImpactParticleSize, null, new Vec3f(xdir * (float)motionBeforeCollide.X * 8, 0, zdir * (float)motionBeforeCollide.Z * 8));
-                        World.PlaySoundAt(new AssetLocation("sounds/thud"), this, null, false, 32, strength);
+                        World.PlaySoundAt(new AssetLocation(break_sound_asset_loc), this, null, false, 32, strength);
                         Die();
                     }
                 }
@@ -148,7 +165,7 @@ namespace CupMod.Entities
                     if (strength > 0.1f && World.Rand.NextDouble() > 1 - VerticalImpactBreakChance)
                     {
                         World.SpawnCubeParticles(SidedPos.XYZ.OffsetCopy(0, 0.25, 0), ProjectileStack, 0.5f, ImpactParticleCount, ImpactParticleSize, null, new Vec3f((float)motionBeforeCollide.X * 8, (float)-motionBeforeCollide.Y * 6, (float)motionBeforeCollide.Z * 8));
-                        World.PlaySoundAt(new AssetLocation("sounds/thud"), this, null, false, 32, strength);
+                        World.PlaySoundAt(new AssetLocation(break_sound_asset_loc), this, null, false, 32, strength);
                         Die();
                     }
                 }

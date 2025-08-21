@@ -1,5 +1,5 @@
 {
-	code: "claymug",
+	code: "flagon",
 	class: "cupmod.cup",
 	behaviors: [
 		{ name: "GroundStorable", properties: { layout: 'Quadrants', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } },
@@ -7,24 +7,26 @@
 		{ name: "RightClickPickup"} 
 	],
 	variantgroups: [
-		{ code: "color", states: ["blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan"]},
+		{ code: "wood", loadFromProperties: "block/wood"},
+		{ code: "metal", loadFromProperties: "block/metal"}
 	],
-	shape: { base: "cupmod:block/cups/mug" },
+	shape: { base: "cupmod:block/cups/flagon" },
 	textures: {
-		"mat": { base: "game:block/clay/hardened/{color}" }
+		"wood": { base: "game:block/wood/debarked/{wood}*" },
+		"metal": { base: "game:block/metal/ingot/{metal}" }
 	},
 	attributes: {
 		handbook: {
 			ignoreCreativeInvStacks: true,
-			groupBy: ["claymug-*-{color}"]
+			groupBy: ["flagon-*-{color}"]
 		},
 		shelvable: true,
 		liquidContainerProps: {
 			capacityLitres: 0.3,
 			transferSizeLitres: 0.1,
-			emptyShapeLoc: "cupmod:block/cups/mug",
-			opaqueContentShapeLoc: "cupmod:block/cups/mug-contents",
-			liquidContentShapeLoc: "cupmod:block/cups/mug-liquidcontents",
+			emptyShapeLoc: "cupmod:block/cups/flagon",
+			opaqueContentShapeLoc: "cupmod:block/cups/flagon-contents",
+			liquidContentShapeLoc: "cupmod:block/cups/flagon-liquidcontents",
 			liquidMaxYTranslate: 0.05
 		},
 		onTongTransform: {
@@ -32,10 +34,10 @@
 			rotation: { x: 45, y: 86, z: -67 },
 			scale: 0.9
 		},
-		breakchance: 0.2
+		breakchance: 0.0
 	},
 	doNotRenderAtLod2: true,
-	blockmaterial: "Ceramic",
+	blockmaterial: "Wood",
 	creativeinventory: { "general": ["*"], "decorative": ["*"] },
 	replaceable: 300,
 	liquidSelectable: 1,
@@ -51,7 +53,6 @@
 		}
 	},
 	sounds: {
-		"walk": "game:walk/stone*"
 	},
 	sideopaque: {
 		all: false
