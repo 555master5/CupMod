@@ -71,8 +71,6 @@ namespace CupMod.Entities
                     WatchedAttributes.SetLong("firedBy", FiredBy.EntityId);
                 }
             }
-            HorizontalImpactBreakChance = Attributes.GetFloat("breakchance");
-            Console.WriteLine("[Cup Mod] Break chance is "+HorizontalImpactBreakChance);
 
             if (Api.Side == EnumAppSide.Client)
             {
@@ -124,6 +122,8 @@ namespace CupMod.Entities
             if (!beforeCollided && World is IServerWorldAccessor)
             {
                 float strength = GameMath.Clamp((float)motionBeforeCollide.Length() * 4, 0, 1);
+                string cup_material = Variant["material"];
+                Console.WriteLine("[Cup Mod] Cup made from material " + cup_material+ "has collided with strength "+strength);
 
                 if (CollidedHorizontally)
                 {
@@ -136,7 +136,8 @@ namespace CupMod.Entities
                     if (strength > 0.1f && World.Rand.NextDouble() > 1 - HorizontalImpactBreakChance)
                     {
                         World.SpawnCubeParticles(SidedPos.XYZ.OffsetCopy(0, 0.2, 0), ProjectileStack, 0.5f, ImpactParticleCount, ImpactParticleSize, null, new Vec3f(xdir * (float)motionBeforeCollide.X * 8, 0, zdir * (float)motionBeforeCollide.Z * 8));
-                        //Die();
+                        World.PlaySoundAt(new AssetLocation("sounds/thud"), this, null, false, 32, strength);
+                        Die();
                     }
                 }
 
@@ -147,7 +148,8 @@ namespace CupMod.Entities
                     if (strength > 0.1f && World.Rand.NextDouble() > 1 - VerticalImpactBreakChance)
                     {
                         World.SpawnCubeParticles(SidedPos.XYZ.OffsetCopy(0, 0.25, 0), ProjectileStack, 0.5f, ImpactParticleCount, ImpactParticleSize, null, new Vec3f((float)motionBeforeCollide.X * 8, (float)-motionBeforeCollide.Y * 6, (float)motionBeforeCollide.Z * 8));
-                        //Die();
+                        World.PlaySoundAt(new AssetLocation("sounds/thud"), this, null, false, 32, strength);
+                        Die();
                     }
                 }
 

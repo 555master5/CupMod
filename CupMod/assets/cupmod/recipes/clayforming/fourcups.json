@@ -41,5 +41,5 @@
 		"###  ###",
 	]],
 	name: "Cup",
-	output: { type: "block", code: "cupmod:rawcup-{color}", stacksize: 4  }
+	output: { type: "block", code: "cupmod:rawclaycup-{color}", stacksize: 4  }
 }

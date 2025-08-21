@@ -28,5 +28,5 @@
 		]
 	],
 	name: "Cup",
-	output: { type: "block", code: "cupmod:rawcup-{color}"}
+	output: { type: "block", code: "cupmod:rawclaycup-{color}"}
 }

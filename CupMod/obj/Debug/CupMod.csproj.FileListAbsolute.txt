@@ -12,3 +12,4 @@ E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\CupMod.dep
 E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\CupMod.dll
 E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\CupMod.pdb
 E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\ref\CupMod.dll
+E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\obj\Debug\CupMod.sourcelink.json

@@ -1,11 +1,8 @@
 ﻿using CupMod.Entities;
 using System;
-using System.Diagnostics;
-using System.Linq;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
-using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
@@ -124,16 +121,31 @@ namespace CupMod.Blocks
                 float damage = 1;
                 ItemStack stack = slot.TakeOut(1);
                 string cup_color = stack.Collectible.Variant["color"];
-                string cup_type = stack.Collectible.Variant["type"];
+                string cup_type = stack.Collectible.Code.FirstCodePart();
+                Console.WriteLine(cup_type);
                 slot.MarkDirty();
 
                 IPlayer byPlayer = null;
                 if (byEntity is EntityPlayer) byPlayer = byEntity.World.PlayerByUid(((EntityPlayer)byEntity).PlayerUID);
                 byEntity.World.PlaySoundAt(new AssetLocation("game:sounds/player/throw"), byEntity, byPlayer, false, 8);
 
-                //Cup entity is created - issue with throwncup not being able to have variant
-                EntityProperties type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"throwncup-{cup_color}"));
+                //Cup entity is created - uses base name of cup type (claycup, wineglass, etc) and color to create entity
+                EntityProperties type;
+                switch (cup_type)
+                {
+                    case "claycup":
+                        type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"throwncup-{cup_color}"));
+                        break;
+                    case "claymug":
+                        type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"thrownmug-{cup_color}"));
+                        break;
+                    default:
+                        type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"throwncup-{cup_color}"));
+                        break;
+                }
                 Entity entity = byEntity.World.ClassRegistry.CreateEntity(type);
+                ((EntityThrownCup)entity).HorizontalImpactBreakChance = stack.Collectible.Attributes["breakchance"].AsFloat(0f);
+                Console.WriteLine("[Cup Mod] Break chance set as " + stack.Collectible.Attributes["breakchance"].AsFloat(0f));
 
                 ((EntityThrownCup)entity).FiredBy = byEntity;
                 ((EntityThrownCup)entity).Damage = damage;

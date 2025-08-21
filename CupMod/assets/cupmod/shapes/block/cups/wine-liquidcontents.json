@@ -1,0 +1,31 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": true
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"ceramic": [16,16]
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Content",
+			"from": [ 6.9, 4.5, 6.9 ],
+			"to": [ 9.1, 4.5, 9.1 ],
+			"renderPass": 4,
+			"autoUnwrap": false,
+			"uv": [ 0.0, 0.0 ],
+			"rotationOrigin": [ 7.0, 3.0, 7.0 ],
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 1.0, 1.0, 1.0 ], "autoUv": false },
+				"east": { "texture": "#null", "uv": [ 1.0, 1.0, 3.0, 1.5 ] },
+				"south": { "texture": "#null", "uv": [ 2.0, 1.0, 4.0, 1.5 ] },
+				"west": { "texture": "#null", "uv": [ 3.0, 1.0, 5.0, 1.5 ] },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+				"down": { "texture": "#null", "uv": [ 1.0, 0.0, 3.0, 2.0 ] }
+			}
+		}
+	]}

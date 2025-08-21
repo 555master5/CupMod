@@ -1,5 +1,5 @@
 {
-	code: "throwncup",
+	code: "thrownmug",
 	class: "cupmod.throwncup",
 	tags: ["inanimate", "projectile"],
 	variantgroups: [
@@ -16,7 +16,7 @@
 	deadHitboxSize: { x: 0.25, y: 0.125 },
 	client: {
 		renderer: "Shape",
-		shape: { base: "cupmod:block/cups/cup" },
+		shape: { base: "cupmod:block/cups/mug" },
 		textures: {	
 			"mat": { base: "game:block/clay/hardened/{color}" }	
 		},
