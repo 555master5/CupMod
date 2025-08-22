@@ -1,0 +1,6 @@
+E:\Vintagestory Modding\repos\CupMod\CupMod\ZZCakeBuild\obj\Debug\net7.0\CakeBuild.csproj.AssemblyReference.cache
+E:\Vintagestory Modding\repos\CupMod\CupMod\ZZCakeBuild\obj\Debug\net7.0\CakeBuild.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vintagestory Modding\repos\CupMod\CupMod\ZZCakeBuild\obj\Debug\net7.0\CakeBuild.AssemblyInfoInputs.cache
+E:\Vintagestory Modding\repos\CupMod\CupMod\ZZCakeBuild\obj\Debug\net7.0\CakeBuild.AssemblyInfo.cs
+E:\Vintagestory Modding\repos\CupMod\CupMod\ZZCakeBuild\obj\Debug\net7.0\CakeBuild.csproj.CoreCompileInputs.cache
+E:\Vintagestory Modding\repos\CupMod\CupMod\ZZCakeBuild\obj\Debug\net7.0\CakeBuild.sourcelink.json

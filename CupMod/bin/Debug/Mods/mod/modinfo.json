@@ -4,7 +4,7 @@
     "name": "Cup Mod",
     "description" : "Adds a simple cup",
     "authors": ["Daymare"],
-    "version": "1.0.0",
+    "version": "1.0.2",
     "dependencies": { 
       "game": ""
     }

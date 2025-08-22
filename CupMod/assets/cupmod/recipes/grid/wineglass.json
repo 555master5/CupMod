@@ -1,17 +1,17 @@
 [
 	{
-		ingredientPattern: "_H_,_C_,_G_",
+		ingredientPattern: "H,C,G",
 		ingredients: {
 			"H": { type: "item", code: "game:hammer-*", isTool: true, toolDurabilityCost: 5 },
 			"C": { type: "item", code: "game:chisel-*", isTool: true, toolDurabilityCost: 5 },
 			"G": { type: "block", code: "game:glass-*", allowedVariants: ["quartz", "plain", "green", "blue", "violet", "red", "yellow", "brown", "vintage", "smoky", "pink"], name: "color" }
 		},
-		width: 3,
+		width: 1,
 		height: 3,
 		output: { 
 			type: "block", 
 			code: "wineglass-{color}", 
-			quantity: 2
+			quantity: 8
 		}
 	}
 ]

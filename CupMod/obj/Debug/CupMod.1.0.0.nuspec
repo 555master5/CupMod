@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CupMod</id>
+    <version>1.0.0</version>
+    <authors>CupMod</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="e9a481ebba83779c837581e864d0323bd7589caa" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="any/net8.0/modinfo.json" buildAction="Content" />
+      <files include="any/net8.0/modicon.png" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\bin\Debug\Mods\mod\CupMod.dll" target="lib\net8.0\CupMod.dll" />
+    <file src="E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\modinfo.json" target="content\modinfo.json" />
+    <file src="E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\modinfo.json" target="contentFiles\any\net8.0\modinfo.json" />
+    <file src="E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\modicon.png" target="content\modicon.png" />
+    <file src="E:\Vintagestory Modding\repos\CupMod\CupMod\CupMod\modicon.png" target="contentFiles\any\net8.0\modicon.png" />
+  </files>
+</package>

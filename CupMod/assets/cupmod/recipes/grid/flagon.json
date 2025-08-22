@@ -7,7 +7,6 @@
 		},
 		width: 2,
 		height: 1,
-		shapeless: true,
 		output: { 
 			type: "block", 
 			code: "flagon-{wood}-{metal}", 

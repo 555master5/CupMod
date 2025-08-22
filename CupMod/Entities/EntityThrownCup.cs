@@ -132,6 +132,9 @@ namespace CupMod.Entities
                     case "claymug":
                         break_sound_asset_loc = "sounds/block/ceramicbreak";
                         break;
+                    case "clayshot":
+                        break_sound_asset_loc = "sounds/block/ceramicbreak";
+                        break;
                     case "wineglass":
                         break_sound_asset_loc = "sounds/block/glass";
                         break;

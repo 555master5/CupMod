@@ -152,6 +152,9 @@ namespace CupMod.Blocks
                     case "claymug":
                         type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"thrownmug-{cup_color}"));
                         break;
+                    case "clayshot":
+                        type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"thrownshot-{cup_color}"));
+                        break;
                     case "wineglass":
                         type = byEntity.World.GetEntityType(new AssetLocation("cupmod", $"thrownwineglass-{cup_color}"));
                         break;
