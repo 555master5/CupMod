@@ -1,10 +1,10 @@
 {
     "type": "code",
-    "modid": "cupmod",
-    "name": "Cup Mod",
-    "description" : "Adds a simple cup",
+    "modid": "daymarescupmod",
+    "name": "Daymare's Cup Mod",
+    "description" : "Adds various drinking implements that can be thrown.",
     "authors": ["Daymare"],
-    "version": "1.0.2",
+    "version": "1.0.6",
     "dependencies": { 
       "game": ""
     }

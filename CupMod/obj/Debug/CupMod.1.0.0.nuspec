@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <authors>CupMod</authors>
     <description>Package Description</description>
-    <repository type="git" commit="e9a481ebba83779c837581e864d0323bd7589caa" />
+    <repository type="git" commit="7ef15eb762d09758b6a2a0a95b3efce235e86fcd" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>

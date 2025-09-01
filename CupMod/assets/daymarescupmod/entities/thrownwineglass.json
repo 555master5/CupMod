@@ -1,0 +1,31 @@
+{
+	code: "thrownwineglass",
+	class: "daymarescupmod.throwncup",
+	tags: ["inanimate", "projectile"],
+	variantgroups: [
+		{ code: "color", states: ["quartz", "plain", "green", "blue", "violet", "red", "yellow", "brown", "vintage", "smoky", "pink"]}
+	],
+	attributes: {
+		isProjectile: true,
+		physics: {
+			groundDragFactor: 1,
+			airDragFactor: 0.25
+		}
+	},
+	hitboxSize: { x: 0.4, y: 0.2 },
+	deadHitboxSize: { x: 0.25, y: 0.125 },
+	client: {
+		renderer: "Shape",
+		shape: { base: "block/cups/wine" },
+		textures: {	
+			"mat": { base: "game:block/glass/{color}" }	
+		},
+		size: 1,
+		behaviors: [{ code: "passivephysics" }, { code: "interpolateposition" }],
+	},
+	server: {
+		behaviors: [{ code: "passivephysics" }, { code: "despawn", minSeconds: 300 }],
+	},
+	sounds: {
+	},
+}

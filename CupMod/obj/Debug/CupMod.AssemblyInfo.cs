@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CupMod")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9a481ebba83779c837581e864d0323bd7589caa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ef15eb762d09758b6a2a0a95b3efce235e86fcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CupMod")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CupMod")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

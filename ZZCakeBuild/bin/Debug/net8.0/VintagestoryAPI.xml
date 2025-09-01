@@ -1346,7 +1346,7 @@
         </member>
         <member name="M:Vintagestory.API.Common.IBlockAccessor.SpawnBlockEntity(System.String,Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.ItemStack)">
             <summary>
-            Spawn block entity at this position. Does not place it's corresponding block, you have to this yourself.
+            Spawn block entity at this position. Does not place its corresponding block, you have to do this yourself.
             </summary>
             <param name="classname"></param>
             <param name="position"></param>
@@ -1360,7 +1360,7 @@
         </member>
         <member name="M:Vintagestory.API.Common.IBlockAccessor.RemoveBlockEntity(Vintagestory.API.MathTools.BlockPos)">
             <summary>
-            Permanently removes any block entity at this postion. Does not remove it's corresponding block, you have to do this yourself. Marks the chunk dirty so that it gets saved to disk during shutdown or next autosave.
+            Permanently removes any block entity at this postion. Does not remove its corresponding block, you have to do this yourself. Marks the chunk dirty so that it gets saved to disk during shutdown or next autosave.
             </summary>
             <param name="position"></param>
         </member>
@@ -7649,6 +7649,31 @@
         <member name="F:Vintagestory.API.Common.VertexFlags.WindBitsMask">
             <summary>
             Bit 26..31
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.Common.VertexFlags.LiquidIsLavaBitMask">
+            <summary>
+            Important: DO NOT USE THIS WITH THE &lt;&lt; OPERATOR: it's already shifted. It is a bit mask not a bit pos!
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.Common.VertexFlags.LiquidWeakFoamBitMask">
+            <summary>
+            Important: DO NOT USE THIS WITH THE &lt;&lt; OPERATOR: it's already shifted. It is a bit mask not a bit pos!
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.Common.VertexFlags.LiquidWeakWaveBitMask">
+            <summary>
+            Important: DO NOT USE THIS WITH THE &lt;&lt; OPERATOR: it's already shifted. It is a bit mask not a bit pos!
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.Common.VertexFlags.LiquidFullAlphaBitMask">
+            <summary>
+            Important: DO NOT USE THIS WITH THE &lt;&lt; OPERATOR: it's already shifted. It is a bit mask not a bit pos!
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.Common.VertexFlags.LiquidExposedToSkyBitMask">
+            <summary>
+            Important: DO NOT USE THIS WITH THE &lt;&lt; OPERATOR: it's already shifted. It is a bit mask not a bit pos!
             </summary>
         </member>
         <member name="P:Vintagestory.API.Common.VertexFlags.All">
@@ -19217,7 +19242,7 @@
         </member>
         <member name="P:Vintagestory.API.Client.IRenderAPI.CameraType">
             <summary>
-            The camera type.
+            The desired camera type. Be aware, the actual camera type can change at runtime if the player is against a wall and tries to look from inside the wall - use entityPlayer.CameraMode to get the actual mode
             </summary>
         </member>
         <member name="P:Vintagestory.API.Client.IRenderAPI.CameraStuck">
@@ -25383,6 +25408,14 @@
             <param name="textureId">The previous texture id.</param>
             <param name="linearMag">Whether or not the texture will have linear magnification.</param>
         </member>
+        <member name="M:Vintagestory.API.Client.GuiElement.GenerateTexture(Vintagestory.API.Client.ICoreClientAPI,Cairo.ImageSurface,System.Int32@,System.Boolean)">
+            <summary>
+            Generates a texture with an ID. (A static version of generateTexture())
+            </summary>
+            <param name="surface">The image surface supplied.</param>
+            <param name="textureId">The previous texture id.</param>
+            <param name="linearMag">Whether or not the texture will have linear magnification.</param>
+        </member>
         <member name="M:Vintagestory.API.Client.GuiElement.generateTexture(Cairo.ImageSurface,Vintagestory.API.Client.LoadedTexture@,System.Boolean)">
             <summary>
             Generates a new texture.
@@ -25408,6 +25441,13 @@
         <member name="M:Vintagestory.API.Client.GuiElement.genContext(Cairo.ImageSurface)">
             <summary>
             Generates context based off the image surface.
+            </summary>
+            <param name="surface">The surface where the context is based.</param>
+            <returns>The context based off the provided surface.</returns>
+        </member>
+        <member name="M:Vintagestory.API.Client.GuiElement.GenContext(Cairo.ImageSurface)">
+            <summary>
+            Generates context based off the image surface.  (A static version of genContext(), identical behavior)
             </summary>
             <param name="surface">The surface where the context is based.</param>
             <returns>The context based off the provided surface.</returns>

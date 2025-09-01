@@ -1,0 +1,24 @@
+{
+	ingredient: { 
+		type: "item", 
+		code: "game:clay-*", 
+		name: "color", 
+		allowedVariants: ["blue", "fire", "red"] 
+	},
+	pattern: [
+		[
+			"##",
+			"##",
+		],
+		[
+			"##",
+			"##",
+		],
+		[
+			"##",
+			"##",
+		]
+	],
+	name: "Shot",
+	output: { type: "block", code: "rawclayshot-{color}"}
+}

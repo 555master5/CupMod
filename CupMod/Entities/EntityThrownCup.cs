@@ -118,7 +118,7 @@ namespace CupMod.Entities
         public override void OnCollided()
         {
             EntityPos pos = SidedPos;
-            
+
             if (!beforeCollided && World is IServerWorldAccessor)
             {
                 float strength = GameMath.Clamp((float)motionBeforeCollide.Length() * 4, 0, 1);
@@ -138,7 +138,7 @@ namespace CupMod.Entities
                     case "wineglass":
                         break_sound_asset_loc = "sounds/block/glass";
                         break;
-                    case "flagon":
+                    case "tankard":
                         break_sound_asset_loc = "sounds/block/stickbreak";
                         break;
                     default:
