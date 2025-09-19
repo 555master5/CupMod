@@ -26,26 +26,26 @@
 	attributesByType:{
 		"rawclaycup-red":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "claycup-tan" },
-				"1": { "type": "block", "code": "claycup-orange" },
-				"2": { "type": "block", "code": "claycup-red" },
-				"3": { "type": "block", "code": "claycup-brown" }
+				"0": { "type": "block", "code": "daymarescupmod:claycup-tan" },
+				"1": { "type": "block", "code": "daymarescupmod:claycup-orange" },
+				"2": { "type": "block", "code": "daymarescupmod:claycup-red" },
+				"3": { "type": "block", "code": "daymarescupmod:claycup-brown" }
 			}
 		},
 		"rawclaycup-blue":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "claycup-cream"},
-				"1": { "type": "block", "code": "claycup-gray"},
-				"2": { "type": "block", "code": "claycup-black"},
-				"3": { "type": "block", "code": "claycup-black"}
+				"0": { "type": "block", "code": "daymarescupmod:claycup-cream"},
+				"1": { "type": "block", "code": "daymarescupmod:claycup-gray"},
+				"2": { "type": "block", "code": "daymarescupmod:claycup-black"},
+				"3": { "type": "block", "code": "daymarescupmod:claycup-black"}
 			}
 		},
 		"rawclaycup-fire":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "claycup-fire"},
-				"1": { "type": "block", "code": "claycup-fire"},
-				"2": { "type": "block", "code": "claycup-fire"},
-				"3": { "type": "block", "code": "claycup-fire"}
+				"0": { "type": "block", "code": "daymarescupmod:claycup-fire"},
+				"1": { "type": "block", "code": "daymarescupmod:claycup-fire"},
+				"2": { "type": "block", "code": "daymarescupmod:claycup-fire"},
+				"3": { "type": "block", "code": "daymarescupmod:claycup-fire"}
 			}
 		}
 	},
@@ -55,7 +55,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "claycup-fire" },
+			smeltedStack: { type: "block", code: "daymarescupmod:claycup-fire" },
 			requiresContainer: false
 		},
 		"rawclaycup-*": {
@@ -63,7 +63,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "claycup-blue" },
+			smeltedStack: { type: "block", code: "daymarescupmod:claycup-blue" },
 			requiresContainer: false
 		}
 	},

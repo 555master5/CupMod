@@ -26,26 +26,26 @@
 	attributesByType:{
 		"rawclaymug-red":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "claymug-tan" },
-				"1": { "type": "block", "code": "claymug-orange" },
-				"2": { "type": "block", "code": "claymug-red" },
-				"3": { "type": "block", "code": "claymug-brown" }
+				"0": { "type": "block", "code": "daymarescupmod:claymug-tan" },
+				"1": { "type": "block", "code": "daymarescupmod:claymug-orange" },
+				"2": { "type": "block", "code": "daymarescupmod:claymug-red" },
+				"3": { "type": "block", "code": "daymarescupmod:claymug-brown" }
 			}
 		},
 		"rawclaymug-blue":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "claymug-cream"},
-				"1": { "type": "block", "code": "claymug-gray"},
-				"2": { "type": "block", "code": "claymug-black"},
-				"3": { "type": "block", "code": "claymug-black"}
+				"0": { "type": "block", "code": "daymarescupmod:claymug-cream"},
+				"1": { "type": "block", "code": "daymarescupmod:claymug-gray"},
+				"2": { "type": "block", "code": "daymarescupmod:claymug-black"},
+				"3": { "type": "block", "code": "daymarescupmod:claymug-black"}
 			}
 		},
 		"rawclaymug-fire":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "claymug-fire"},
-				"1": { "type": "block", "code": "claymug-fire"},
-				"2": { "type": "block", "code": "claymug-fire"},
-				"3": { "type": "block", "code": "claymug-fire"}
+				"0": { "type": "block", "code": "daymarescupmod:claymug-fire"},
+				"1": { "type": "block", "code": "daymarescupmod:claymug-fire"},
+				"2": { "type": "block", "code": "daymarescupmod:claymug-fire"},
+				"3": { "type": "block", "code": "daymarescupmod:claymug-fire"}
 			}
 		}
 	},
@@ -55,7 +55,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "claymug-fire" },
+			smeltedStack: { type: "block", code: "daymarescupmod:claymug-fire" },
 			requiresContainer: false
 		},
 		"rawclaymug-*": {
@@ -63,7 +63,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "claymug-blue" },
+			smeltedStack: { type: "block", code: "daymarescupmod:claymug-blue" },
 			requiresContainer: false
 		}
 	},

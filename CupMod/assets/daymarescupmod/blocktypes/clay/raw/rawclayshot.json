@@ -26,26 +26,26 @@
 	attributesByType:{
 		"rawclayshot-red":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "clayshot-tan" },
-				"1": { "type": "block", "code": "clayshot-orange" },
-				"2": { "type": "block", "code": "clayshot-red" },
-				"3": { "type": "block", "code": "clayshot-brown" }
+				"0": { "type": "block", "code": "daymarescupmod:clayshot-tan" },
+				"1": { "type": "block", "code": "daymarescupmod:clayshot-orange" },
+				"2": { "type": "block", "code": "daymarescupmod:clayshot-red" },
+				"3": { "type": "block", "code": "daymarescupmod:clayshot-brown" }
 			}
 		},
 		"rawclayshot-blue":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "clayshot-cream"},
-				"1": { "type": "block", "code": "clayshot-gray"},
-				"2": { "type": "block", "code": "clayshot-black"},
-				"3": { "type": "block", "code": "clayshot-black"}
+				"0": { "type": "block", "code": "daymarescupmod:clayshot-cream"},
+				"1": { "type": "block", "code": "daymarescupmod:clayshot-gray"},
+				"2": { "type": "block", "code": "daymarescupmod:clayshot-black"},
+				"3": { "type": "block", "code": "daymarescupmod:clayshot-black"}
 			}
 		},
 		"rawclayshot-fire":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "clayshot-fire"},
-				"1": { "type": "block", "code": "clayshot-fire"},
-				"2": { "type": "block", "code": "clayshot-fire"},
-				"3": { "type": "block", "code": "clayshot-fire"}
+				"0": { "type": "block", "code": "daymarescupmod:clayshot-fire"},
+				"1": { "type": "block", "code": "daymarescupmod:clayshot-fire"},
+				"2": { "type": "block", "code": "daymarescupmod:clayshot-fire"},
+				"3": { "type": "block", "code": "daymarescupmod:clayshot-fire"}
 			}
 		}
 	},
@@ -55,7 +55,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "clayshot-fire" },
+			smeltedStack: { type: "block", code: "daymarescupmod:clayshot-fire" },
 			requiresContainer: false
 		},
 		"rawclayshot-*": {
@@ -63,7 +63,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "clayshot-blue" },
+			smeltedStack: { type: "block", code: "daymarescupmod:clayshot-blue" },
 			requiresContainer: false
 		}
 	},

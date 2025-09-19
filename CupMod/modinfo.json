@@ -4,7 +4,7 @@
     "name": "Daymare's Cup Mod",
     "description" : "Adds various drinking implements that can be thrown.",
     "authors": ["Daymare"],
-    "version": "1.0.6",
+    "version": "1.0.7",
     "dependencies": { 
       "game": ""
     }
